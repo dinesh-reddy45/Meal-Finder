@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Finder</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo" onclick="goHome(); return false;">
+      <svg width="22" height="22" viewBox="0 0 24 24"><path fill="white" d="M12 2 2 11h3v10h14V11h3L12 2zm-2 8h1.5v4H10v-4zm3 0h1.5v6H13v-6z"/></svg>
+      MEAL FINDER
+    </a>
+    <button class="menu-btn" onclick="openMenu()" aria-label="Open menu">
+      <svg width="28" height="28" viewBox="0 0 24 24"><path fill="white" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </button>
+  </header>
+
+
+  <div class="side-menu" id="sideMenu">
+    <button class="close-btn" onclick="closeMenu()" aria-label="Close menu">
+      <svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#e2611f" stroke-width="2"/><path d="M8 8l8 8M16 8l-8 8" stroke="#e2611f" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <ul id="menuList"></ul>
+  </div>
+
+
+  <section class="hero">
+  
+    <div class="hero-cloth"></div>
+
+    <div class="hero-content">
+      <div class="search-row">
+        <input type="text" id="searchInput" placeholder="Search recipes here ...">
+        <button id="searchBtn" onclick="searchMeals()" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <h1>What are your favorite cuisines?</h1>
+      <p>PERSONALIZE YOUR EXPERIENCE</p>
+    </div>
+  </section>
+
+ 
+  <div class="breadcrumb hidden" id="breadcrumb">
+    <a href="#" onclick="goHome(); return false;">
+      <svg width="20" height="20" viewBox="0 0 24 24"><path fill="white" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </a>
+    <span class="arrows">&raquo;</span>
+    <span id="breadcrumbName"></span>
+  </div>
+
+ 
+  <section class="section hidden" id="detailSection">
+    <h2 class="title">Meal Details</h2>
+    <div class="detail-card" id="detailCard"></div>
+  </section>
+
+
+  <section class="category-info hidden" id="categoryInfo">
+    <h3 id="categoryInfoTitle"></h3>
+    <p id="categoryInfoText"></p>
+  </section>
+
+  <section class="section hidden" id="mealsSection">
+    <h2 class="title">Meals</h2>
+    <div class="meals-grid" id="mealsGrid"></div>
+  </section>
+
+
+  <section class="section gray" id="categoriesSection">
+    <h2 class="title">Categories</h2>
+    <div class="categories-grid" id="categoriesGrid"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
